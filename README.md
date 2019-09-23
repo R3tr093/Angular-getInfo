@@ -10,12 +10,12 @@
 
 good reading !  :notebook:
 
-<ul> Table of contents
+<ul> <h4>Table of contents></h4>
     <li href="#c1"> Prerequisite </li>
 </ul>
 
 
-<p> Sources  :point_down: </p>
+<p> <b>Sources</b>  :point_down: </p>
 
 <p><i><a href="https://devcenter.heroku.com/articles/mean-apps-restful-api" target="_blank"> Heroku </a></i></p>
 <p><i><a href="https://www.codemeals.com/angular/deploy-angular-7-app-to-heroku/" target="_blank"> codeMeals</a></i></p>
