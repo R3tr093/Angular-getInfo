@@ -141,7 +141,7 @@ good reading !  :notebook:
 
 <p>Another option is to use <a href="https://www.mongodb.com/cloud/atlas" target="_blank">atlas mongoDB</a>, this being in our tutorial we will continue the installation of a database with the add-on m-lab.</p>
 
-<p>Our fist command is : </p>
+<p>Our first command is : </p>
 
 <code>heroku addons:create mongolab --app myAppName </code>
 
