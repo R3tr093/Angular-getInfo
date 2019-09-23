@@ -12,9 +12,9 @@ good reading !  :notebook:
 
 <ul> <h4>Table of contents</h4>
     <li>  <a href="#c1" target="_blank" >Prerequisite</a> </li>
-    <li><a href="c2" target="_blank" > Create a new App</a> </li>
-    <li><a href="c3" target="_blank" > Deploy on Heroku</a></li>
-    <li><a href="c4" target="_blank" > Provide MongoDB</a></li>
+    <li><a href="#c2" target="_blank" > Create a new App</a> </li>
+    <li><a href="#c3" target="_blank" > Deploy on Heroku</a></li>
+    <li><a href="#c4" target="_blank" > Provide MongoDB</a></li>
 </ul>
 
 
@@ -68,7 +68,7 @@ good reading !  :notebook:
 
 <code>npm install --save express path</code>
 
-<p><em>  :exclamation: Don't forget the flag <b>--save </b> </em></p>
+<br><p><em>  :exclamation: Don't forget the flag <b>--save </b> </em></p><br>
 
 <p>We gonna write some code to verify we have our angular application connected with Express, in first we need to create a file named server.js to write our source code for the server.</p>
 
@@ -85,13 +85,13 @@ app.use(express.static(distDir));elow : </p>
 <code>app.use(express.static(__dirname + '/dist/MY_APP_NAME_HERE'));</code><br>
 <code>app.get('/*', function(req, res) {res.sendFile(path.join(__dirname + '/dist/MY_APP_NAME_HERE/index.html'));}); </code><br>
 <code>app.listen(process.env.PORT || 3000); </code><br>
-<p><em>  :exclamation: Don't forget to write your own app name</em></p>
+<br><p><em>  :exclamation: Don't forget to write your own app name</em></p><br>
 
 <p>In your root directory you should have a file named package.json, edit this file by adding the following code : </p>
 
 <p> In the array named scripts, add the following entry : </p>
 <code>"start": "node server.js"</code>
-<p><em>  :exclamation: You probably already get at start entry with " ng serve" replace ng serve by node server.js </em></p>
+<br><p><em>  :exclamation: You probably already get at start entry with " ng serve" replace ng serve by node server.js </em></p><br>
 
 <p> At the end of the array named scripts : </p>
 
@@ -102,7 +102,7 @@ app.use(express.static(distDir));elow : </p>
 <code>  "node": "~10.16.0",</code><br>
 <code>  "npm": "~6.4.1" }</code><br>
 
-<p><em>  :exclamation: Ensure the node and npm version are equals to your version. </em></p>
+<br><p><em>  :exclamation: Ensure the node and npm version are equals to your version. </em></p><br>
 
 <p> Now type once : </p>
 
@@ -128,7 +128,7 @@ app.use(express.static(distDir));elow : </p>
 <code> git add . </code><br>
 <code> git commit -m " First commit " </code><br>
 <code> git push  https://git.heroku.com/repositoryCreatedByHeroku.git master </code><br>
-<p><em>  :exclamation: You have to enter the url of the repository created by Heroku from the command <b> Heroku create </b></em></p>
+<br><p><em>  :exclamation: You have to enter the url of the repository created by Heroku from the command <b> Heroku create </b></em></p><br>
 
 <p> Once this command is complete, you will see in the terminal that the construction of the site is complete and the address to which it was deployed.</p>
 
@@ -153,7 +153,7 @@ app.use(express.static(distDir));elow : </p>
 <p> Now in your <b> server.js </b> copy/paste the code from here <a href="https://github.com/R3tr093/Angular-getInfo/blob/master/example.js" target="_blank"> https://github.com/R3tr093/Angular-getInfo/blob/master/example.js </a> </p>
 
 
-<p><em>  :exclamation: On the line 17 you have to enter the name of your folder, in our example is myAppName.</em></p>
+<br><p><em>  :exclamation: On the line 17 you have to enter the name of your folder, in our example is myAppName.</em></p><br>
 
 <p> And add new package into your dependencies with the command below at the root of your directory : </p>
 
@@ -170,7 +170,7 @@ app.use(express.static(distDir));elow : </p>
 
 <p> Type the command below to check if you can get/post the data from your api : </p>
 <code> curl -H "Content-Type: application/json" -d '{"name":"mLab Support", "email": "support@mlab.com"}' http://your-app-name.herokuapp.com/api/contacts </code>
-<p><em>  :exclamation: Don't forget to replace the url by the url of your own application.</em></p>
+<br><p><em>  :exclamation: Don't forget to replace the url by the url of your own application.</em></p><br>
 
 <p> And this tutorial is over, you can go at <a href="https://your-app-name.herokuapp.com/api/contacts" target="_blank" >https://your-app-name.herokuapp.com/api/contacts</a></p>
 
