@@ -8,13 +8,10 @@ var CONTACTS_COLLECTION = "contacts";
 var app = express();
 app.use(bodyParser.json());
 
-// Serve static files....
-app.use(express.static(__dirname + '/dist/getInfo'));
+// Create link to Angular build directory
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
 
-// Send all requests to index.html
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/getInfo/index.html'));
-});
 
 
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
