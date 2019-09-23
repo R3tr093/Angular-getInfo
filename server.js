@@ -34,7 +34,7 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:2701
 });
 
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/MY_APP_NAME_HERE/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/getInfo/index.html'));
 });
 
 
