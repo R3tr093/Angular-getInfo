@@ -106,7 +106,7 @@ app.use(express.static(distDir));elow : </p>
 
 <p> Now type once : </p>
 
-<code> npm install </p>
+<code> npm install </code><br>
 
 <p>Alrigth, now we can try to see our new App in local browser so open your CLI and move into the root directory and type : </p>
 
@@ -150,7 +150,7 @@ app.use(express.static(distDir));elow : </p>
 
 <p>Heroku config variables are equivalent to an environment variable, which you can use in development and your local environment. You can access this variable in your Node.js code as process.env.MONGODB_URI, which we will use later in our server code.</p>
 
-<p> Now in your <b> server.js <b> copy/paste the code from here <a href="https://github.com/R3tr093/Angular-getInfo/blob/master/example.js" target="_blank"> https://github.com/R3tr093/Angular-getInfo/blob/master/example.js </a> </p>
+<p> Now in your <b> server.js </b> copy/paste the code from here <a href="https://github.com/R3tr093/Angular-getInfo/blob/master/example.js" target="_blank"> https://github.com/R3tr093/Angular-getInfo/blob/master/example.js </a> </p>
 
 
 <p><em>  :exclamation: On the line 17 you have to enter the name of your folder, in our example is myAppName.</em></p>
