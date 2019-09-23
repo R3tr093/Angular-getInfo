@@ -76,12 +76,12 @@ good reading !  :notebook:
 
 <p>Into this nice empty file, write some code like this for the example.</p>
 
-<code>const express = require('express'); </code>
-<code>const path = require('path'); </code>
-<code>const app = express(); </code>
-<code>app.use(express.static(__dirname + '/dist/MY_APP_NAME_HERE'));</code>
-<code>app.get('/*', function(req, res) {res.sendFile(path.join(__dirname + '/dist/MY_APP_NAME_HERE/index.html'));}); </code>
-<code>app.listen(process.env.PORT || 3000); </code>
+<code>const express = require('express'); </code><br>
+<code>const path = require('path'); </code><br>
+<code>const app = express(); </code><br>
+<code>app.use(express.static(__dirname + '/dist/MY_APP_NAME_HERE'));</code><br>
+<code>app.get('/*', function(req, res) {res.sendFile(path.join(__dirname + '/dist/MY_APP_NAME_HERE/index.html'));}); </code><br>
+<code>app.listen(process.env.PORT || 3000); </code><br>
 <p><em>  :exclamation: Don't forget to write your own app name</em></p>
 
 <p>In your root directory you should have a file named package.json, edit this file by adding the following code : </p>
@@ -92,5 +92,7 @@ good reading !  :notebook:
 
 <p>Put inside or create an array "engines" with  your node version and npm version in your package.json file </p>
 <code>"engines": {</code>
-<code>  "node": "~8.15.1",</code>
+<code>  "node": "~10.16.0",</code>
 <code>  "npm": "~6.4.1" }</code>
+
+<p><em>  :exclamation: Ensure the node and npm version are equals to your version. </em></p>
