@@ -11,8 +11,10 @@
 good reading !  :notebook:
 
 <ul> <h4>Table of contents</h4>
-    <li href="#c1"> Prerequisite </li>
-    <li href="#c2"> Create a new App </li>
+    <li>  <a href="#c1" target="_blank" >Prerequisite</a> </li>
+    <li><a href="c2" target="_blank" > Create a new App</a> </li>
+    <li><a href="c3" target="_blank" > Deploy on Heroku</a></li>
+    <li><a href="c4" target="_blank" > Provide MongoDB</a></li>
 </ul>
 
 
@@ -70,7 +72,8 @@ good reading !  :notebook:
 
 <p>We gonna write some code to verify we have our angular application connected with Express, in first we need to create a file named server.js to write our source code for the server.</p>
 
-<p>In the root of your project type the command below : </p>
+<p>In the root of your project type the commanvar distDir = __dirname + "/dist/getInfo";
+app.use(express.static(distDir));elow : </p>
 
 <code>touch server.js</code>
 
@@ -101,8 +104,74 @@ good reading !  :notebook:
 
 <p><em>  :exclamation: Ensure the node and npm version are equals to your version. </em></p>
 
+<p> Now type once : </p>
+
+<code> npm install </p>
+
 <p>Alrigth, now we can try to see our new App in local browser so open your CLI and move into the root directory and type : </p>
 
-<code> node server.js </code
+<code> node server.js </code>
 
 <p>You should see your angular default template on the screen at <a href="http://localhost:3000/" target="_blank">http://localhost:3000/ </a></p>
+
+<h2 id="c3"> Deploy on Heroku </h2><hr>
+
+<p>To deploy our application on Heroku we just need a few lines of command with the Heroku CLI </p>
+
+<p>Let's begin with the first one : </p>
+
+<code> heroku create </code>
+
+<p> At the end of the order a repository was created for our application and an url address was assigned. Now we want to git init our folder </p>
+
+<code> git init </code>
+<code> git add . </code>
+<code> git commit -m " First commit " </code>
+<code> git push  https://git.heroku.com/repositoryCreatedByHeroku.git master </code>
+<p><em>  :exclamation: You have to enter the url of the repository created by Heroku from the command <b> Heroku create </b></em></p>
+
+<p> Once this command is complete, you will see in the terminal that the construction of the site is complete and the address to which it was deployed.</p>
+
+<p>For now you can click on the link provided to see your Angular application hosted </p>
+
+<h2 id="c4"> Provide MongoDB </h2><hr>
+
+<p>There are several ways to provide a database to our application, we will use the add-on m-lab provided by Heroku. </p>
+
+<p>To use this type of service it is necessary to inform a credit card to your account Heroku, the installation and the use of m-lab remains free.</p>
+
+<p>Another option is to use <a href="https://www.mongodb.com/cloud/atlas" target="_blank">atlas mongoDB</a>, this being in our tutorial we will continue the installation of a database with the add-on m-lab.</p>
+
+<p>Our fist command is : </p>
+
+<code>heroku addons:create mongolab --app myAppName </code>
+
+<p> When you create a mLab add-on, the database connection URI is stored as a config var. </p>
+
+<p>Heroku config variables are equivalent to an environment variable, which you can use in development and your local environment. You can access this variable in your Node.js code as process.env.MONGODB_URI, which we will use later in our server code.</p>
+
+<p> Now in your <b> server.js <b> copy/paste the code from here <a href="https://github.com/R3tr093/Angular-getInfo/blob/master/example.js" target="_blank"> https://github.com/R3tr093/Angular-getInfo/blob/master/example.js </a> </p>
+
+
+<p><em>  :exclamation: On the line 17 you have to enter the name of your folder, in our example is myAppName.</em></p>
+
+<p> And add new package into your dependencies with the command below at the root of your directory : </p>
+
+<code> npm install mongodb express body-parser --save </code>
+
+<code> npm install</code>
+
+<p> Finally push into the heroku repository : </p>
+
+<code> git init </code>
+<code> git add . </code>
+<code> git commit -m " First commit " </code>
+<code> git push  https://git.heroku.com/repositoryCreatedByHeroku.git master </code>
+
+<p> Type the command below to check if you can get/post the data from your api : </p>
+<code> curl -H "Content-Type: application/json" -d '{"name":"mLab Support", "email": "support@mlab.com"}' http://your-app-name.herokuapp.com/api/contacts </code>
+<p><em>  :exclamation: Don't forget to replace the url by the url of your own application.</em></p>
+
+<p> And this tutorial is over, you can go at <a href="https://your-app-name.herokuapp.com/api/contacts" target="_blank" >https://your-app-name.herokuapp.com/api/contacts</a></p>
+
+<p> Thank you for following with me this tutorial  :simple_smile: , feel free to let me a message or a pull request if something wrong. </p>

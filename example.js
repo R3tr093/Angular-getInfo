@@ -6,15 +6,17 @@ var ObjectID = mongodb.ObjectID;
 var CONTACTS_COLLECTION = "contacts";
 
 var app = express();
+
+
+
 app.use(bodyParser.json());
 
 
-var distDir = __dirname + "/dist/getInfo";
+// EDIT NAME
+var distDir = __dirname + "/dist/myAppName";
 app.use(express.static(distDir));
 
-
 var db;
-
 
 mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/test", function (err, client) {
   if (err) {
@@ -22,27 +24,22 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:2701
     process.exit(1);
   }
 
-
+  // Save database object from the callback for reuse.
   db = client.db();
   console.log("Database connection ready");
 
-
+  // Initialize the app.
   var server = app.listen(process.env.PORT || 8080, function () {
     var port = server.address().port;
     console.log("App now running on port", port);
   });
 });
 
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/getInfo/index.html'));
-});
-
-
-
 function handleError(res, reason, message, code) {
   console.log("ERROR: " + reason);
   res.status(code || 500).json({"error": message});
 }
+
 
 app.get("/api/contacts", function(req, res) {
   db.collection(CONTACTS_COLLECTION).find({}).toArray(function(err, docs) {
@@ -71,36 +68,12 @@ app.post("/api/contacts", function(req, res) {
   }
 });
 
+
 app.get("/api/contacts/:id", function(req, res) {
-  db.collection(CONTACTS_COLLECTION).findOne({ _id: new ObjectID(req.params.id) }, function(err, doc) {
-    if (err) {
-      handleError(res, err.message, "Failed to get contact");
-    } else {
-      res.status(200).json(doc);
-    }
-  });
 });
 
 app.put("/api/contacts/:id", function(req, res) {
-  var updateDoc = req.body;
-  delete updateDoc._id;
-
-  db.collection(CONTACTS_COLLECTION).updateOne({_id: new ObjectID(req.params.id)}, updateDoc, function(err, doc) {
-    if (err) {
-      handleError(res, err.message, "Failed to update contact");
-    } else {
-      updateDoc._id = req.params.id;
-      res.status(200).json(updateDoc);
-    }
-  });
 });
 
 app.delete("/api/contacts/:id", function(req, res) {
-  db.collection(CONTACTS_COLLECTION).deleteOne({_id: new ObjectID(req.params.id)}, function(err, result) {
-    if (err) {
-      handleError(res, err.message, "Failed to delete contact");
-    } else {
-      res.status(200).json(req.params.id);
-    }
-  });
 });
