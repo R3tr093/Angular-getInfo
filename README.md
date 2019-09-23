@@ -27,17 +27,17 @@ good reading !  :notebook:
 
 <p>For a good beginning, i will let you know you probably should have some soft skills with MongoDB, Angular, And express.</p>
 
-<p>If you don't have any knowledge about these things, you should practice a little with them.  :wink: </p>
+<p>If you don't have any knowledge about these things, you should practice a little bit with them.  :wink: </p>
 
 <p> Well, the first thing we have to do is to ensure we get an recent version of node on our system.<br>
-    For the entire article, i use an Linux Debian operating system, i let you search about the same command on your operating system as well.</p>
+    For the entire article, i use an Linux Debian operating system, i let you search about the same command for your operating system as well.</p>
 
-<p> We need a version of node higher at the  8.0.0, i wrote this application under node version 10.16.0, you can install on the website below : </p>
+<p> We need a version of node higher at the  8.0.0, i wrote this application under node version 10.16.0, you can install node.js on the website below : </p>
 
 
 <p><a href="https://nodejs.org/en/" target="_blank" > nodejs.org</a></p>
 
-<p> Check if you nodejs installation is working by the command : <b><i>node -v </i></b> <br>You should also have npm installed you can check if is working also by the command <b><i> npm -v </i></b>
+<p> Check if you nodejs installation is working by the command : <b><i>node -v </i></b> <br>You should also have npm installed you can check if is working also by the command : <b><i> npm -v </i></b>
 
 
 <p> Now you need to get a verified account on Heroku, register yourself on <a href="https://signup.heroku.com/" target="_blank" > Heroku</a></p>
@@ -51,3 +51,9 @@ good reading !  :notebook:
 
 
 <h2 id="c2"> Create a new App </h2>
+
+<p> With the angular you can create a new project really quickly, use the command below to create a new angular project. </p>
+
+<code> ng new myAppName </code>
+
+<p><em> Feel free to replace myAppName by something more original </em></p>
