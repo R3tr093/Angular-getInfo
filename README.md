@@ -52,8 +52,45 @@ good reading !  :notebook:
 
 <h2 id="c2"> Create a new App </h2>
 
-<p> With the angular you can create a new project really quickly, use the command below to create a new angular project. </p>
+<p> With the angular/cli you can create a new project really quickly, use the command below to create a new angular project. </p>
 
 <code> ng new myAppName </code>
 
 <p><em> Feel free to replace myAppName by something more original </em></p>
+
+<p> Now move into your new directory </p>
+
+<code> cd myAppName </code>
+
+<p>We need to use Express as a server for our application, install Express with the command below : </p>
+
+<code>npm install --save express path</code>
+
+<p><em>  :exclamation: Don't forget the flag <b>--save </b> </em></p>
+
+<p>we gonna write some code to verify we have our angular application connected on with Express, in first we need to create a file named server.js to write our source code for the server.</p>
+
+<p>In the root of your project type the command below : </p>
+
+<code>touch server.js</code>
+
+<p>Into this nice empty file, write some code like this for the example.</p>
+
+<code>
+const express = require('express');
+const path = require('path');
+const app = express();
+
+// Serve static files....
+app.use(express.static(__dirname + '/dist/MY_APP_NAME_HERE'));
+
+// Send all requests to index.html
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/MY_APP_NAME_HERE/index.html'));
+});
+
+// default Heroku PORT
+app.listen(process.env.PORT || 3000);
+</code>
+
+<p><em>  :exclamation: Don't forget to write your own app name</em></p>
