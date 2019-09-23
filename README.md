@@ -68,7 +68,7 @@ good reading !  :notebook:
 
 <p><em>  :exclamation: Don't forget the flag <b>--save </b> </em></p>
 
-<p>we gonna write some code to verify we have our angular application connected on with Express, in first we need to create a file named server.js to write our source code for the server.</p>
+<p>We gonna write some code to verify we have our angular application connected with Express, in first we need to create a file named server.js to write our source code for the server.</p>
 
 <p>In the root of your project type the command below : </p>
 
@@ -76,21 +76,21 @@ good reading !  :notebook:
 
 <p>Into this nice empty file, write some code like this for the example.</p>
 
-<code>
-const express = require('express');
-const path = require('path');
-const app = express();
-
-// Serve static files....
-app.use(express.static(__dirname + '/dist/MY_APP_NAME_HERE'));
-
-// Send all requests to index.html
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/MY_APP_NAME_HERE/index.html'));
-});
-
-// default Heroku PORT
-app.listen(process.env.PORT || 3000);
-</code>
-
+<code>const express = require('express'); </code>
+<code>const path = require('path'); </code>
+<code>const app = express(); </code>
+<code>app.use(express.static(__dirname + '/dist/MY_APP_NAME_HERE'));</code>
+<code>app.get('/*', function(req, res) {res.sendFile(path.join(__dirname + '/dist/MY_APP_NAME_HERE/index.html'));}); </code>
+<code>app.listen(process.env.PORT || 3000); </code>
 <p><em>  :exclamation: Don't forget to write your own app name</em></p>
+
+<p>In your root directory you should have a file named package.json, edit this file by adding the following code : </p>
+
+<p> At the end of the array named scripts : </p>
+
+<code>"postinstall": "ng build --aot --prod" </code>
+
+<p>Put inside or create an array "engines" with  your node version and npm version in your package.json file </p>
+<code>"engines": {</code>
+<code>  "node": "~8.15.1",</code>
+<code>  "npm": "~6.4.1" }</code>
