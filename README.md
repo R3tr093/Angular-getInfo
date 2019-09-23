@@ -98,9 +98,9 @@ app.use(express.static(distDir));elow : </p>
 <code>"postinstall": "ng build --aot --prod" </code>
 
 <p>Put inside or create an array "engines" with  your node version and npm version in your package.json file </p>
-<code>"engines": {</code>
-<code>  "node": "~10.16.0",</code>
-<code>  "npm": "~6.4.1" }</code>
+<code>"engines": {</code><br>
+<code>  "node": "~10.16.0",</code><br>
+<code>  "npm": "~6.4.1" }</code><br>
 
 <p><em>  :exclamation: Ensure the node and npm version are equals to your version. </em></p>
 
@@ -124,10 +124,10 @@ app.use(express.static(distDir));elow : </p>
 
 <p> At the end of the order a repository was created for our application and an url address was assigned. Now we want to git init our folder </p>
 
-<code> git init </code>
-<code> git add . </code>
-<code> git commit -m " First commit " </code>
-<code> git push  https://git.heroku.com/repositoryCreatedByHeroku.git master </code>
+<code> git init </code><br>
+<code> git add . </code><br>
+<code> git commit -m " First commit " </code><br>
+<code> git push  https://git.heroku.com/repositoryCreatedByHeroku.git master </code><br>
 <p><em>  :exclamation: You have to enter the url of the repository created by Heroku from the command <b> Heroku create </b></em></p>
 
 <p> Once this command is complete, you will see in the terminal that the construction of the site is complete and the address to which it was deployed.</p>
@@ -163,10 +163,10 @@ app.use(express.static(distDir));elow : </p>
 
 <p> Finally push into the heroku repository : </p>
 
-<code> git init </code>
-<code> git add . </code>
-<code> git commit -m " First commit " </code>
-<code> git push  https://git.heroku.com/repositoryCreatedByHeroku.git master </code>
+<code> git init </code><br>
+<code> git add . </code><br>
+<code> git commit -m " First commit " </code><br>
+<code> git push  https://git.heroku.com/repositoryCreatedByHeroku.git master </code><br>
 
 <p> Type the command below to check if you can get/post the data from your api : </p>
 <code> curl -H "Content-Type: application/json" -d '{"name":"mLab Support", "email": "support@mlab.com"}' http://your-app-name.herokuapp.com/api/contacts </code>
