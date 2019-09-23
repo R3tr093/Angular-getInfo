@@ -173,4 +173,4 @@ good reading !  :notebook:
 
 <p> And this tutorial is over, you can go at <a href="https://your-app-name.herokuapp.com/api/contacts" target="_blank" >https://your-app-name.herokuapp.com/api/contacts</a></p>
 
-<p> Thank you for following with me this tutorial  :simple_smile: , feel free to let me a message or a pull request if something wrong. </p>
+<p> Thank you for following with me this tutorial  :smile: , feel free to let me a message or a pull request if something wrong. </p>
