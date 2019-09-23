@@ -72,8 +72,7 @@ good reading !  :notebook:
 
 <p>We gonna write some code to verify we have our angular application connected with Express, in first we need to create a file named server.js to write our source code for the server.</p>
 
-<p>In the root of your project type the commanvar distDir = __dirname + "/dist/getInfo";
-app.use(express.static(distDir));elow : </p>
+<p>In the root of your project type the command: </p>
 
 <code>touch server.js</code>
 
