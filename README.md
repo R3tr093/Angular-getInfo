@@ -169,7 +169,7 @@ app.use(express.static(distDir));elow : </p>
 <code> git push  https://git.heroku.com/repositoryCreatedByHeroku.git master </code><br>
 
 <p> Type the command below to check if you can get/post the data from your api : </p>
-<code> curl -H "Content-Type: application/json" -d '{"name":"mLab Support", "email": "support@mlab.com"}' http://your-app-name.herokuapp.com/api/contacts </code>
+<code> curl -H "Content-Type: application/json" -d '{"name":"mLab Support", "email": "support@mlab.com"}' http://your-app-name.herokuapp.com/api/contacts </code><br>
 <br><p><em>  :exclamation: Don't forget to replace the url by the url of your own application.</em></p><br>
 
 <p> And this tutorial is over, you can go at <a href="https://your-app-name.herokuapp.com/api/contacts" target="_blank" >https://your-app-name.herokuapp.com/api/contacts</a></p>
