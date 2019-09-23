@@ -86,6 +86,10 @@ good reading !  :notebook:
 
 <p>In your root directory you should have a file named package.json, edit this file by adding the following code : </p>
 
+<p> In the array named scripts, add the following entry : </p>
+<code>"start": "node server.js"</code>
+<p><em>  :exclamation: You probably already get at start entry with " ng serve" replace ng serve by node server.js </em></p>
+
 <p> At the end of the array named scripts : </p>
 
 <code>"postinstall": "ng build --aot --prod" </code>
@@ -96,3 +100,9 @@ good reading !  :notebook:
 <code>  "npm": "~6.4.1" }</code>
 
 <p><em>  :exclamation: Ensure the node and npm version are equals to your version. </em></p>
+
+<p>Alrigth, now we can try to see our new App in local browser so open your CLI and move into the root directory and type : </p>
+
+<code> node server.js </code
+
+<p>You should see your angular default template on the screen at <a href="http://localhost:3000/" target="_blank">http://localhost:3000/ </a></p>
