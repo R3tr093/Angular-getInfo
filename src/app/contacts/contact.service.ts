@@ -8,7 +8,7 @@ export class ContactService {
 
     constructor (private http: Http) {}
 
-    // get("/api/contacts")
+ 
     getContacts(): Promise<void | Contact[]> {
       return this.http.get(this.contactsUrl)
                  .toPromise()
@@ -16,7 +16,6 @@ export class ContactService {
                  .catch(this.handleError);
     }
 
-    // post("/api/contacts")
     createContact(newContact: Contact): Promise<void | Contact> {
       return this.http.post(this.contactsUrl, newContact)
                  .toPromise()
@@ -24,9 +23,7 @@ export class ContactService {
                  .catch(this.handleError);
     }
 
-    // get("/api/contacts/:id") endpoint not used by Angular app
-
-    // delete("/api/contacts/:id")
+  
     deleteContact(delContactId: String): Promise<void | String> {
       return this.http.delete(this.contactsUrl + '/' + delContactId)
                  .toPromise()
@@ -34,7 +31,7 @@ export class ContactService {
                  .catch(this.handleError);
     }
 
-    // put("/api/contacts/:id")
+   
     updateContact(putContact: Contact): Promise<void | Contact> {
       var putUrl = this.contactsUrl + '/' + putContact._id;
       return this.http.put(putUrl, putContact)
@@ -45,7 +42,7 @@ export class ContactService {
 
     private handleError (error: any) {
       let errMsg = (error.message) ? error.message :
-      error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-      console.error(errMsg); // log to console instead
+      error.status ? `${error.status} - ${error.statusText}` : 'Oups ! , Server error sorry about that.';
+      console.error(errMsg); 
     }
 }
