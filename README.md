@@ -12,6 +12,7 @@ good reading !  :notebook:
 
 <ul> <h4>Table of contents</h4>
     <li href="#c1"> Prerequisite </li>
+    <li href="#c2"> Create a new App </li>
 </ul>
 
 
@@ -36,11 +37,17 @@ good reading !  :notebook:
 
 <p><a href="https://nodejs.org/en/" target="_blank" > nodejs.org</a></p>
 
-<p> Check if you nodejs installation is working by the command : <b><i>node -v </i></b> you should also have npm installed you can check if is working also by the command <b><i> npm -v </i></b>
+<p> Check if you nodejs installation is working by the command : <b><i>node -v </i></b> <br>You should also have npm installed you can check if is working also by the command <b><i> npm -v </i></b>
 
 
 <p> Now you need to get a verified account on Heroku, register yourself on <a href="https://signup.heroku.com/" target="_blank" > Heroku</a></p>
 
-<p> For this tutorial we gonna use the Heroku CLI, you can download it on ubuntu by the command : <b><i>sudo snap install --classic heroku</i></b>, find all informations you need about the Heroku CLI here : <a href="https://devcenter.heroku.com/articles/heroku-cli" target="_blank">https://devcenter.heroku.com/articles/heroku-cli</a></p>
+<p> For this tutorial we gonna use the Heroku CLI, you can download it on ubuntu by the command :<br> <b><i>sudo snap install --classic heroku</i></b>, find all informations you need about the Heroku CLI here : <a href="https://devcenter.heroku.com/articles/heroku-cli" target="_blank">https://devcenter.heroku.com/articles/heroku-cli</a></p>
+
+<p> A last thing you need to get is the angular-CLI, you can use this command in your terminal to install angular/cli<br>
+<b><i> npm install -g @angular/cli </i></b>
+
+<p> Now let's code  :ok_hand: </p>
 
 
+<h2 id="c2"> Create a new App </h2>
