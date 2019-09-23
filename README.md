@@ -90,8 +90,8 @@ app.use(express.static(distDir));elow : </p>
 <p>In your root directory you should have a file named package.json, edit this file by adding the following code : </p>
 
 <p> In the array named scripts, add the following entry : </p>
-<code>"start": "node server.js"</code>
-<br><p><em>  :exclamation: You probably already get at start entry with " ng serve" replace ng serve by node server.js </em></p><br>
+<code>"start": "node server.js"</code><br>
+<br><p><em>  :exclamation: You probably already get a start entry with " ng serve" replace ng serve by node server.js </em></p><br>
 
 <p> At the end of the array named scripts : </p>
 
